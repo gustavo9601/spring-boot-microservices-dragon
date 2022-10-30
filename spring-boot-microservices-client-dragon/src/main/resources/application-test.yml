@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        producernumbers-out-0:
+          destination: numbers
+        consumernumbers-in-0:
+          destination: sqares
+        processornumbers-out-0:
+          destination: sqares
+        processornumbers-in-0:
+          destination: numbers
+      function:
+        definition: producernumbers;processornumbers;consumernumbers
